@@ -27,8 +27,8 @@ void setup() {
     
     compass.setMode(QMC_MODE_CONTINUOUS);
     compass.setODR(QMC_ODR_100HZ);
-    compass.setOSR1(QMC_OSR1_8);
-    compass.setRange(QMC_RNG_2G);
+    compass.setOSR1(QMC_OVERSAMPLING_X8);
+    compass.setRange(QMC_RANGE_2G);
     compass.setSetResetMode(QMC_SET_RESET_ON);
     compass.applySettings();
 
