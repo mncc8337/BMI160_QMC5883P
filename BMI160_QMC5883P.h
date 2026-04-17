@@ -65,15 +65,15 @@ enum QMC5883P_SetReset {
 #define QMC5883P_ROTATION_90 BMI160_MAG_ROTATION_90
 #define QMC5883P_ROTATION_180 BMI160_MAG_ROTATION_180
 #define QMC5883P_ROTATION_270 BMI160_MAG_ROTATION_270
+typedef BMI160MagRotation QMC5883PRotation;
 
 class BMI160_QMC5883P {
 public:
     BMI160_QMC5883P(BMI160Class& bmi);
 
-    bool begin(BMI160MagRotation magRot);
+    bool begin(QMC5883PRotation magRot);
 
     void getMagneticField(int16_t* x, int16_t* y, int16_t* z);
-
     void setMode(QMC5883P_Mode mode);
     void setODR(QMC5883P_ODR odr);
     void setOSR1(QMC5883P_OSR1 osr1);
@@ -82,6 +82,13 @@ public:
     void setSetResetMode(QMC5883P_SetReset sr_mode);
 
     void applySettings(); 
+
+    QMC5883P_Mode getMode();
+    QMC5883P_ODR getODR();
+    QMC5883P_OSR1 getOSR1();
+    QMC5883P_OSR2 getOSR2();
+    QMC5883P_Range getRange();
+    QMC5883P_SetReset getSetResetMode();
 
     void softReset();
     void triggerSelfTest();

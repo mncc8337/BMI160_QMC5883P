@@ -58,6 +58,30 @@ void BMI160_QMC5883P::setSetResetMode(QMC5883P_SetReset sr_mode) {
     _ctrl2 = (_ctrl2 & ~0b00000011) | sr_mode;
 }
 
+QMC5883P_Mode BMI160_QMC5883P::getMode() {
+    return (QMC5883P_Mode)(_ctrl1 & 0b00000011);
+}
+
+QMC5883P_ODR BMI160_QMC5883P::getODR() {
+    return (QMC5883P_ODR)((_ctrl1 >> 2) & 0b00000011);
+}
+
+QMC5883P_OSR1 BMI160_QMC5883P::getOSR1() {
+    return (QMC5883P_OSR1)((_ctrl1 >> 4) & 0b00000011);
+}
+
+QMC5883P_OSR2 BMI160_QMC5883P::getOSR2() {
+    return (QMC5883P_OSR2)((_ctrl1 >> 6) & 0b00000011);
+}
+
+QMC5883P_Range BMI160_QMC5883P::getRange() {
+    return (QMC5883P_Range)((_ctrl2 >> 2) & 0b00000011);
+}
+
+QMC5883P_SetReset BMI160_QMC5883P::getSetResetMode() {
+    return (QMC5883P_SetReset)(_ctrl2 & 0b00000011);
+}
+
 void BMI160_QMC5883P::applySettings() {
     _bmi->magSetupMode();
     delay(5);
