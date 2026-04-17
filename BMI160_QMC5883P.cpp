@@ -17,7 +17,7 @@ bool BMI160_QMC5883P::begin(QMC5883PRotation magRot) {
         return false;
     }
 
-    _bmi->setMagRotation(magRot);
+    _bmi->setMagRotation((BMI160MagRotation)magRot);
 
     softReset();
     applySettings();
