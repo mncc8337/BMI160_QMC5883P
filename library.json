@@ -24,6 +24,6 @@
   "frameworks": "arduino",
   "platforms": "*",
   "dependencies": {
-    "mncc8337/BMI160-Arduino-Extended": "^1.0.0"
+    "mncc8337/BMI160-Arduino-Extended": "*"
   }
 }
