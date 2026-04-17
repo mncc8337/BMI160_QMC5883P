@@ -3,9 +3,9 @@
 BMI160_QMC5883P::BMI160_QMC5883P(BMI160Class& bmi) {
     _bmi = &bmi;
     
-    _ctrl1 = (QMC_OSR2_1 << 6) | (QMC_OSR1_4 << 4) | (QMC_ODR_200HZ << 2) | QMC_MODE_CONTINUOUS;
+    _ctrl1 = (QMC_UNDERSAMPLING_X1 << 6) | (QMC_OVERSAMPLING_X4 << 4) | (QMC_ODR_200HZ << 2) | QMC_MODE_CONTINUOUS;
     
-    _ctrl2 = (QMC_RNG_8G << 2) | QMC_SET_RESET_ON;
+    _ctrl2 = (QMC_RANGE_8G << 2) | QMC_SET_RESET_ON;
 }
 
 bool BMI160_QMC5883P::begin(BMI160MagRotation magRot) {
