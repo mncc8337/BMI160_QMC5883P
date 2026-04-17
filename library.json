@@ -1,0 +1,29 @@
+{
+  "name": "BMI160_QMC5883P",
+  "version": "1.0.0",
+  "description": "QMC5883P magnetometer supports for BMI160 using the secondary I2C bus.",
+  "keywords": [
+    "sensor",
+    "magnetometer",
+    "compass",
+    "bmi160",
+    "qmc5883p",
+    "i2c"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mncc8337/BMI160_QMC5883P.git"
+  },
+  "authors": [
+    {
+      "name": "mncc8337",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "frameworks": "arduino",
+  "platforms": "*",
+  "dependencies": {
+    "mncc8337/BMI160-Arduino-Extended": "^1.0.0"
+  }
+}
