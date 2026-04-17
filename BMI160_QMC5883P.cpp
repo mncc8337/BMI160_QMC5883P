@@ -8,7 +8,7 @@ BMI160_QMC5883P::BMI160_QMC5883P(BMI160Class& bmi) {
     _ctrl2 = (QMC_RANGE_8G << 2) | QMC_SET_RESET_ON;
 }
 
-bool BMI160_QMC5883P::begin(BMI160MagRotation magRot) {
+bool BMI160_QMC5883P::begin(QMC5883PRotation magRot) {
     if(!_bmi->initializeMagnetometer(
         QMC5883P_I2C_ADDR,
         QMC5883P_CHIP_ID_REG,
