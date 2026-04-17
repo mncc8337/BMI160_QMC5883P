@@ -1,6 +1,6 @@
 {
   "name": "BMI160_QMC5883P",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "QMC5883P magnetometer supports for BMI160 using the secondary I2C bus.",
   "keywords": [
     "sensor",
